@@ -1,5 +1,12 @@
+@Library('pipeline-library-demo')_
+
+
 node ('maven-label'){
    def mvnHome
+   stage('shared library')
+   {
+     sayHello 'Ayush'      
+   }
    stage('Preparation') { 
       
       git 'https://github.com/ayushtest1/card.git'
